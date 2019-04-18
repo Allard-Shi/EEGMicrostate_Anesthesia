@@ -9,7 +9,7 @@ function [ms_array] = labeleeg(eegdata, ms, lamda, b, varargin)
 %           3) lamda     : Penalty parameter for nonsmoothness
 %           4) b         : Window semi-length
 %           5) default   : tol (1e-6) 
-%                          corr_thrsh - correaltion threshold (0.00 - 1.00) 
+%                          corr_thrsh - correaltion threshold (0.00 - 1.00) default 0.50
 %
 %  Outputs: 1) ms_array  :Labeled Microstate EEG array (a*b matrix)
 %                         a -  Number of time frame  b - Number of epoches

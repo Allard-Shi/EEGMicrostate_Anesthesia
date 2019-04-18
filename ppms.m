@@ -1,5 +1,5 @@
 function Ppms = ppms(eeg, ms_array, N_ms, Fs)
-%% Calculate the Ratio of total time covered (RTT)
+%% Calculate Microstate-based Power
 %  
 %  Inputs : 1) eeg        : EEG time frame (a*b*c matrix)
 %                           a - Number of electrodes
@@ -11,8 +11,7 @@ function Ppms = ppms(eeg, ms_array, N_ms, Fs)
 %           3) N_ms       : Number of microstates
 %           4) Fs         : Sampling rate (Hz)
 %
-%  Outputs: 1) RTT        : Percent of time covered by one template within a given
-%                           EEG epoch(1*a vector)
+%  Outputs: 1) Ppms       : microstate power(1*a vector)        
 %                           a - Number of microstates
 %
 %  Code: Allard Shi, Xian Jiaotong University
@@ -22,7 +21,7 @@ Ppms  = zeros(1,N_ms);
 [~,N_time,N_epoch] = size(eeg);
 L_ms = zeros(1,N_ms);
 
-%% Calculate RTT
+%% Calculate Ppms
 for i = 1:N_epoch
     for j = 1:N_time
         if ms_array(j,i) == 0
