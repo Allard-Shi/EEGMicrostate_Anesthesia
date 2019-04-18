@@ -1,4 +1,4 @@
-function [ms_array] = labeleeg(eegdata, ms, lamda, b, varargin)
+function [ms_array, Corr] = labeleeg(eegdata, ms, lamda, b, varargin)
 %% Fitting eegdata raw data using microstates
 %  
 %  Inputs:  1) eegdata   : EEG data array (a*b*c matrix)
@@ -9,10 +9,13 @@ function [ms_array] = labeleeg(eegdata, ms, lamda, b, varargin)
 %           3) lamda     : Penalty parameter for nonsmoothness
 %           4) b         : Window semi-length
 %           5) default   : tol (1e-6) 
-%                          corr_thrsh - correaltion threshold (0.00 - 1.00) default 0.50
+%                          corr_thrsh - correaltion threshold (0.00 - 1.00) 
 %
 %  Outputs: 1) ms_array  :Labeled Microstate EEG array (a*b matrix)
 %                         a -  Number of time frame  b - Number of epoches
+%           2) Corr      :Maximum of spatial similarity between microstate
+%                         topography and EEG topography (1*b cell)
+%                         b - Number of epoches
 %
 %  Anthor: Soupee Li, Allard Wen Shi  
 %  Copyright (C) Soupee Li, Allard Shi from Xian Jiaotong University 
