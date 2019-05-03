@@ -1,18 +1,15 @@
-function KL = computeKL(W,num_electrode)
+function KL = computeKL(M)
 %% Compute Krzanowski-Lai criterion
 %
-% inputs:   1)W            : KL criterion params (Dispersion)
+% inputs:   1)M            : KL criterion params obtained from M-Kmeans
 %
 % ouputs:   1)KL           : Krzanowski-Lai criterion value
 %           2)num_electrode: Number of electrodes
 %  
 % Anthor: Allard Shi, Xian Jiaotong University
 
-num = size(W,1);
+num = size(M,2);
 KL = zeros(1,num-2);
-for i =1:num
-    M(i) = W(i)*i^(2/num_electrode);
-end
 for i = 1:num-2
     if M(i) < M(i+1)
         KL(i) = 0;
