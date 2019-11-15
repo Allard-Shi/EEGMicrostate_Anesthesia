@@ -4,7 +4,7 @@ function RTT = rtt(ms_array)
 %  Inputs : 1) ms_array   :EEG Microstate array of 1 epoch(a*b vector)
 %                          a - number of epoches   b -  Number of time frame
 %  Outputs: 1) RTT        :Percent of time covered by one template map within a given
-%                          EEG epoch(1*a vector)
+%                          EEG epoch (1*a vector)
 %                          a -  Number of microstates
 %
 %  Code: Soupee Li, Allard Shi, Xian Jiaotong University

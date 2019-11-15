@@ -25,10 +25,7 @@ function [Band_power,Band_ms,Spectrum] = bandecompose(memdimf,ms_array,band,N_ms
 %  Anthor: Allard Wen Shi  
 %  Copyright (C) Allard Shi, Xian Jiaotong University
 
-%% Initialize the params
-% eegdata = EEG;
-% N_ms = 5;
-
+%% init params
 N_epoch = size(memdimf,2);
 [N_band,~] = size(band);
 [N_e,~,N_time] = size(memdimf{1}); 

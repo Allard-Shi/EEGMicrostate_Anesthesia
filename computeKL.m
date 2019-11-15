@@ -4,7 +4,6 @@ function KL = computeKL(M)
 % inputs:   1)M            : KL criterion params obtained from M-Kmeans
 %
 % ouputs:   1)KL           : Krzanowski-Lai criterion value
-%           2)num_electrode: Number of electrodes
 %  
 % Anthor: Allard Shi, Xian Jiaotong University
 

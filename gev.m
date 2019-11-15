@@ -1,20 +1,20 @@
 function GEV = gev(eegdata, ms_array, ms, choose_gfp)
 %% Compute global explained varience across EEG signals
 %
-%  Inputs:  1) eegdata   :EEG data array (a*b*c matrix)
-%                         a - Number of electrodes  b - Number of time frame 
-%                         c - Number of epoches
-%           2) ms_array  :Labeled Microstate EEG array (a*b matrix)
-%                         a -  Number of time frame  b - Number of epoches
-%           3) ms        :Microstates (a*b matrix)
-%                         a - Number of electrodes  b - Number of microstates
-%           4) choose_gfp:Choose GFP or not
-%                         0: whole EEG      not 0: GFP 
+%  Inputs:  1) eegdata    :EEG data array (a*b*c matrix)
+%                          a - Number of electrodes  b - Number of time frame 
+%                          c - Number of epoches
+%           2) ms_array   :Labeled Microstate EEG array (a*b matrix)
+%                          a -  Number of time frame  b - Number of epoches
+%           3) ms         :Microstates (a*b matrix)
+%                          a - Number of electrodes  b - Number of microstates
+%           4) choose_gfp :Choose GFP or not
+%                         0: whole EEG series    otherwise: GFP peaks 
 %
-%  Outputs: 1) GEV       :Global field power within each microstate (a*1 vector)
+%  Outputs: 1) GEV        :Global field power within each microstate (a*1 vector)
 %                         a -  Number of microstates
 %
-%  Anthor: Allard Wen Shi  
+%  Anthor: Allard Shi  
 %  Copyright (C) Allard Shi, Xian Jiaotong University 
 
 %% Initialize the params

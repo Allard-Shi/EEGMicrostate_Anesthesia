@@ -1,7 +1,7 @@
 function [band_array, Corr, band_Cd] = bandicap(eeg_freq, ms_array, ms, threshold)
-%% Fit microstates with different frequency bands
+%% Fit microstates energy into different frequency bands
 % 
-% Inputs  £º1) EEG       : EEG band signals (a*b cell)
+% Inputs  £º1) eeg_freq  : EEG band signals (a*b cell)
 %                          a - number of band 
 %                          b - two col. 
 %           2) ms_array  : microstates array (a*b matrix)
@@ -15,12 +15,17 @@ function [band_array, Corr, band_Cd] = bandicap(eeg_freq, ms_array, ms, threshol
 % Outputs:  1) band_array: fitting microstate to different bands (a*b matrix)
 %                          a - number of time series 
 %                          b - number of epoches
-%           2) Corr      : Correlation (1*a*b matrix)
+%           2) Corr      : Correlation (a*b matrix)
 %                          a - number of time series 
 %                          b - number of epoches
 %
+%           3) band_Cd   : microstate energy in different frequency bands (a*b matrix)
+%                          a - number of band
+%                          b - number of microstates
+%
+%
 %  Anthor: Allard Wen Shi  
-%  Copyright (C) EEGLab and Allard Shi from Xian Jiaotong University
+%  Copyright (C) EEGLab, Allard Shi, Xian Jiaotong University
 
 %% Initialize the params
 [N_band,~] = size(eeg_freq);
