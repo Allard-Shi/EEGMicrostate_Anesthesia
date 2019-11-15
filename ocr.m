@@ -13,8 +13,6 @@ function ocr_v = ocr(ms_array, N_ms, Fs, window)
 %                         a - Number of microstates
 %
 %  Anthor: Soupee Li, Allard Wen Shi  
-%  Copyright (C) Soupee Li, Allard Shi, Xian Jiaotong University
-
 
 %% Initialize the info.  
 [N_frame, N_epoch] = size(ms_array);

@@ -1,9 +1,9 @@
 %% Fit Cartool
 clear;clc;
-filepath = 'E:\Allard\Sedation-RestingState';
-resultpath = 'C:\Users\dell\Desktop\MS_Result\';
+filepath = '';
+resultpath = '';
 datainfo_name = '\datainfo.mat';
-sef_savepath = 'E:\Allard\SedationCartool\Sec';
+sef_savepath = '';
 load(strcat(filepath,datainfo_name));
 N_people = 20;                                              % Number of People
 
@@ -19,7 +19,7 @@ for n = 1:N_people
     N_e = eeg.nbchan;                         % Number of electrodes
     N_trial = eeg.trials;                     % Number of trials
     E_Loc = eeg.chanlocs;                     % Location of electrodes
-    samplingrate = Fs*ones(N_e,1);       % resampling rate matrix
+    samplingrate = Fs*ones(N_e,1);            % resampling rate matrix
     for i = 1:N_trial
         savesef([sef_savepath,num2str(datainfo{4*n-3,2}),'\',num2str(n),'\',num2str(i),'.sef'],EEG(:,:,i)',samplingrate); 
     end  
@@ -33,7 +33,7 @@ for i = 1:length(E_Loc)
 end
 
 % Save data in EEG_locs.els;
-fidpath = 'E:\Allard\SedationCartool\EEG_locs.els';
+fidpath = 'EEG_locs.els';
 fid = fopen(fidpath,'wt');
 fprintf(fid,['ES01\n' int2str(size(loc,1)) '\n1\n10-10 System\n' int2str(size(loc,1)) '\n3\n']);
 for i = 1 : size(loc,1)

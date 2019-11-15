@@ -14,7 +14,7 @@ function Ppms = ppms(eeg, ms_array, N_ms, Fs)
 %  Outputs: 1) Ppms       : microstate power(1*a vector)        
 %                           a - Number of microstates
 %
-%  Code: Allard Shi, Xian Jiaotong University
+%  Author: Allard Shi, Xian Jiaotong University
 
 %% Init params
 Ppms  = zeros(1,N_ms);

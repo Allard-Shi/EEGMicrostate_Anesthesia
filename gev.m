@@ -15,7 +15,6 @@ function GEV = gev(eegdata, ms_array, ms, choose_gfp)
 %                         a -  Number of microstates
 %
 %  Anthor: Allard Shi  
-%  Copyright (C) Allard Shi, Xian Jiaotong University 
 
 %% Initialize the params
 [~,N_frame, N_epoch] = size(eegdata);

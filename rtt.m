@@ -7,7 +7,7 @@ function RTT = rtt(ms_array)
 %                          EEG epoch (1*a vector)
 %                          a -  Number of microstates
 %
-%  Code: Soupee Li, Allard Shi, Xian Jiaotong University
+%  Author: Soupee Li, Allard Shi, Xian Jiaotong University
 
 %% Initialize the info. and Validation
 [N_epoch, N_frame] = size(ms_array);

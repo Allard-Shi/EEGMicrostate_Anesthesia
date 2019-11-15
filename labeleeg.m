@@ -18,7 +18,6 @@ function [ms_array, Corr] = labeleeg(eegdata, ms, lamda, b, varargin)
 %                         b - Number of epoches
 %
 %  Anthor: Soupee Li, Allard Wen Shi  
-%  Copyright (C) Soupee Li, Allard Shi from Xian Jiaotong University 
 
 %% Default Params
 if ~exist('tol'),

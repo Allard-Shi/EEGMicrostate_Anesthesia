@@ -13,7 +13,6 @@ function TP = trp_matrix(gfp,ms_array,ms)
 %                          c - Number of Epoches
 %
 % Anthor: Soupee Li, Allard Shi  
-% Copyright (C) Xian Jiaotong University 
 
 %% Initialize the info. and Validation
 [~, N_ms] = size(ms);                                          % Number of electrodes and microstates

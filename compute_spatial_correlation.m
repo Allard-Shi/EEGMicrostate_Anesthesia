@@ -8,9 +8,7 @@ function C = compute_spatial_correlation(tseries,ms)
 %
 % ouputs:   1)C        : Correlation    (M*N matrix)
 %                        M - number of time frame  N - number of microstate
-%  
-% Anthor: Allard Wen Shi  
-% Copyright (C) Allard Shi, Xian Jiaotong University 
+%   
 
 %% Spatial correlation
 [~,frame] = size(tseries);

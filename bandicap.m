@@ -23,9 +23,7 @@ function [band_array, Corr, band_Cd] = bandicap(eeg_freq, ms_array, ms, threshol
 %                          a - number of band
 %                          b - number of microstates
 %
-%
 %  Anthor: Allard Wen Shi  
-%  Copyright (C) EEGLab, Allard Shi, Xian Jiaotong University
 
 %% Initialize the params
 [N_band,~] = size(eeg_freq);

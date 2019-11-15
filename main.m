@@ -1,7 +1,8 @@
 %% Microstates Calculation and Validation
 %
 %  This file is aimed to compute the GFP and microstates of EEG 
-%  The EEG data has been preprocessed.
+%  The data used in the research has been avaliable in the following website.
+%  link: https://www.repository.cam.ac.uk/handle/1810/252736
 %
 %  Anthor: Allard Shi, Xian Jiaotong University 
 

@@ -22,7 +22,6 @@ function [ms_energy,ms_power] = topocomposition(memdimf,ms_array,band,N_ms,Fs)
 %                          c - number of microstates
 %
 %  Anthor: Allard Wen Shi  
-%  Copyright (C) Allard Shi, Xian Jiaotong University
 
 %% Initialize the params
 N_epoch = size(memdimf,2);

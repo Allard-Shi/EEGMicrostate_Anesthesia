@@ -1,5 +1,5 @@
 function [Band_power,Band_ms,Spectrum] = bandecompose(memdimf,ms_array,band,N_ms,Fs)
-%% Build up relationship between microstates and frequency band 
+%% Bridge the relationship between microstates and frequency components
 %
 % Inputs  £º1) memdimf    - Intrinsic mode function (IMFs) after MEMD (1*a cell)
 %                           a - number of epoch
@@ -20,10 +20,9 @@ function [Band_power,Band_ms,Spectrum] = bandecompose(memdimf,ms_array,band,N_ms
 %           2) Band_ms    - Band power distributed to different microstates (a*b matrix)
 %                           a - number of selected band
 %                           b - number of microstates
-%           3) Spectrum   - Power spectrum: 
+%           3) Spectrum   - The hht-time-frequency spectrum in c th epoch (1*c cell) 
 %
 %  Anthor: Allard Wen Shi  
-%  Copyright (C) Allard Shi, Xian Jiaotong University
 
 %% init params
 N_epoch = size(memdimf,2);
@@ -58,7 +57,7 @@ for i = 1:N_epoch
     Spectrum{1,i} = P;
 end
 
-%% Transfer to microstates
+%% Transfer to microstate
 temp = 0;
 L_ms = zeros(N_ms,1);
 for i = 1:N_epoch

@@ -9,7 +9,7 @@ function PPS = pps(eeg,Fs)
 %
 % Outputs:  1) PPS     :Global field power peaks per second (times/second)
 %
-% Code: Allard Shi, Xian Jiaotong University
+% Author: Allard Shi, Xian Jiaotong University
 
 %% Initialize the params
 GFP = std(eeg,1);

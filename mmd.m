@@ -8,7 +8,6 @@ function MMD = mmd(ms_array, ms, Fs)
 % Outputs: 1)MMD         :Mean microstate duration (ms)
 %
 % Anthor: Soupee Li, Allard Wen Shi  
-% Copyright (C) Soupee Li, Allard Shi, Xian Jiaotong University 
 
 %% Initialize the params
 [N_num ,N_epoch] = size(ms_array);
