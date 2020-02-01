@@ -15,13 +15,16 @@ The toolbox should be loaded before the usage of the codes.
 ### Citation
 If you find the code useful, please consider to cite our paper:
 ```bibtex
-@article{wen2019anesthesia,
+@article{wen2020anesthesia,
   title={Non-Canonical Microstate Becomes Salient in High Density EEG During Propofol-Induced Altered States of Consciousness},
   author={Wen Shi, Yamin Li, Zhian Liu, Jing Li, Qiang Wang, Xiangguo Yan and Gang Wang},
   journal={International Journal of Neural Systems},
   year={2019},
-  organization={World Scientific}
-  doi={https://doi.org/10.1142/S0129065720500057}
+  volume={30},
+  issue={2},
+  page={2050005},
+  organization={World Scientific},
+  doi={10.1142/S0129065720500057}
 }
 ```
 
