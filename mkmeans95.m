@@ -1,25 +1,26 @@
-function [Kappa, Gamma, R_square, R_cv, W ,M] = mkmeans95(Map_gfp, K, iter, b, lamda, varargin)
+function [Kappa, Gamma, R_square, R_cv, W ,M] = mkmeans95(Map_gfp, K, iter, b, lambda, varargin)
 %% Modified K-means clustering (Pascual-Marqui RD et.al. IEEE Trans Biomed Eng. 1995;42:658¨C65.)
 %  Clustering algorithm and smoothing
 % 
-%  inputs:  1) Map_gfp :  Maps of GFP peaks (M*N matrix) 
-%                         M - number of electordes  N - number of time frame
-%           2) K       :  Number of Microstates
-%           3) iter    :  itertions for optimum solution 
-%           4) b       :  Section length
-%           5) lamda   :  Penalty parameter for nonsmoothness
-%           6) Default :  tol,iter_thereshold
+%  inputs:  1) Map_gfp : Maps of GFP peaks (M*N matrix) 
+%                        M - number of electrodes  N - number of time frame
+%           2) K       : Number of Microstates
+%           3) iter    : Itertions for optimization 
+%           4) b       : Window length (equal to 2*b+1, 0 for no window)
+%           5) lambda  : Penalty parameter for non-smoothness
+%           6) Default : tol,iter_thereshold
 %
-%  outputs: 1) Kappa   : Series (Each peak belongs to its corresponding cluster)
+%  outputs: 1) Kappa   : Series (Each peak for its corresponding cluster)
 %           2) Gamma   : Microstate (M*N matrix)
 %                        M - number of electrodes N - number of micorstate
-%           3) R_square: the extent of fitting (1.00 is the best)
+%           3) R_square: Extent of fitting (the best is 1.00)
 %           4) R_cv    : Variance in cross validation
 %           5) W       : KL criterion param (dispersion of clusters)
 %           6) M       : KL criterion param
 %
-% Anthor: Allard Wen Shi  
-% Copyright (C) Allard Shi from Xian Jiaotong University  
+%  Anthor: Allard Wen Shi
+%
+%  Copyright (C) Allard Shi from Xian Jiaotong University  
 
 %% Default Params
 if ~exist('tol')
@@ -29,6 +30,7 @@ end
 if ~exist('iter_thereshold')
     iter_thereshold = 10000;
 end
+
 %% Initialize the params
 sigma_o = 0; sigma_u = 1000; sigma = 1000;
 [num_channels,frame] = size(Map_gfp); 
@@ -97,7 +99,7 @@ while abs(sigma_o-sigma_u) > tol*sigma_u && times <  iter_thereshold
         % argmin(k)
         S = zeros(K,1);
         for k = 1:K
-            S(k) = (Map_gfp(:,t)'*Map_gfp(:,t)-(Gamma(:,k)'*Map_gfp(:,t))^2)/(2*e*(num_channels-1))-lamda*Nbkt(t-b,k);
+            S(k) = (Map_gfp(:,t)'*Map_gfp(:,t)-(Gamma(:,k)'*Map_gfp(:,t))^2)/(2*e*(num_channels-1))-lambda*Nbkt(t-b,k);
         end
         [~,Min_index] = min(S);
         Ka(t) = Min_index; 
