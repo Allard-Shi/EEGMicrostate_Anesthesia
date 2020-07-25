@@ -1,5 +1,5 @@
 # EEG microstate analysis in anesthesia
-This repository contains relevant codes and implementation of EEG microstate research in propofol-induced anesthesia. The details of method are included in the [paper](https://doi.org/10.1142/S0129065720500057). 
+This repository contains relevant codes and implementation of EEG microstate research in propofol-induced anesthesia. The details of method are included in our paper. 
 
 ### Data availability
 The EEG recordings were freely open-access in [University of Cambridge Data Repository](https://www.repository.cam.ac.uk/handle/1810/252736), comprising of pretreated spontaneous EEG and behavioral data from 20 healthy participants (9 male, 11 female; mean age = 30.85; S.D. = 10.98) during propofol-induced transition of anesthesia with ethical approval provided by the Cambridgeshire 2 Regional Ethics Committee. All clinical investigations were conducted in line with the Declaration of Helsinki.
@@ -14,19 +14,8 @@ The toolbox should be loaded before the usage of the codes.
 
 ### Citation
 If you find the code useful, please consider to cite our paper:
-```bibtex
-@article{wen2020anesthesia,
-  title={Non-Canonical Microstate Becomes Salient in High Density EEG During Propofol-Induced Altered States of Consciousness},
-  author={Wen Shi, Yamin Li, Zhian Liu, Jing Li, Qiang Wang, Xiangguo Yan and Gang Wang},
-  journal={International Journal of Neural Systems},
-  year={2020},
-  volume={30},
-  issue={2},
-  page={2050005},
-  organization={World Scientific},
-  doi={10.1142/S0129065720500057}
-}
-```
+* [[Shi2020]](https://www.worldscientific.com/doi/10.1142/S0129065720500057) Shi, W., Li, Y., Liu, Z., Li, J., Wang, Q., Yan, X., Wang, G. (2020). Non-Canonical Microstate Becomes Salient in High Density EEG During Propofol-Induced Altered States of Consciousness. Int. J. Neural Syst., 30(2), 2050005-1.
+* [[Li2020]](https://https://ieeexplore.ieee.org/document/9136842) Li, Y., Shi, W., Liu, Z., Li, J., Wang, Q., Yan, X., Cao, Z., Wang, G. (2020). Effective brain state estimation during propofol-induced sedation using advanced EEG microstate spectral analysis. IEEE Journal of Biomedical and Health Informatics.
 
 ### Contact
 We welcome any suggestion to help improve the codes and methodology. Please feel free to contact me if you have any question.

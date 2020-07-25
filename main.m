@@ -8,6 +8,7 @@
 
 %% Main code
 clear;clc;
+addpath('func');
 filepath = '';
 resultpath = ''; 
 datainfo_name = '';
@@ -18,10 +19,10 @@ R_square = zeros(N_people,Num_cluster);
 R_cv = zeros(Num_cluster,1);
 W = zeros(Num_cluster,1);
 MS = [];
-b = ; lamda =  ;                                           % Set smoothing params
+b = 1; lamda = 0.05;                                           % Set smoothing params (smooth the microstate sequence)
 
 %% Load data and compute the EEG microstates
-iter = ;
+iter = 1;
 for m = 1:iter
     for c =
         for n = 1:N_people   
